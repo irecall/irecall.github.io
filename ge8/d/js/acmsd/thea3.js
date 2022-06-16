@@ -1,0 +1,1 @@
+document.write("<dl class=\"function\" id=\"s1\"><dt class=\"function_t\">实力的赞助商</dt><dd class=\"function_c\"><div><a target=\"_blank\" ><img src=\"/skin/default/img/s2.jpg\"/></a></div></dd></dl>")

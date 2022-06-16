@@ -1,0 +1,1 @@
+document.write("<td><a href=\"#\" target=\"_blank\" ><img src=\"/d/js/acmsd/Ahead454191010.jpg\"/></a></td>")

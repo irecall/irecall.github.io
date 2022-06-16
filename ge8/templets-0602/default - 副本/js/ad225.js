@@ -1,0 +1,1 @@
+document.writeln("<a  target=\"_blank\" rel=\"nofollow\"><img src=\"/templets/default/images/xiazai2.gif\"/></a>");

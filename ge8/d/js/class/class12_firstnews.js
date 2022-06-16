@@ -1,0 +1,1 @@
+document.write("<li><a href=\"http://www.11d.info/wav/38402.html\" title=\"杨丞琳 - 年轮说[WAV格式]\">杨丞琳 - 年轮说[WAV格式]</a></li>");

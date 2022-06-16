@@ -1,0 +1,1 @@
+document.write("<table width=\"100%\" height=\"90\" bgcolor=\"\">  <tbody><tr align=\"center\">    <td><a><img src=\"/skin/default/img/mao.gif\"></a></td>  </tr></tbody></table>")
