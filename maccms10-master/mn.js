@@ -94,7 +94,7 @@ function collectError() {
   addEventListener('unhandledrejection', e => {
     monitor.errors.push({
       type: 'promise',
-      msg: (e.reason && e.reason.msg )  || e.reason || '',
+      msg: (e.reason && e.reason.msg) || e.reason || '',
       time: new Date().getTime(), // 错误发生的时间
     })
 
