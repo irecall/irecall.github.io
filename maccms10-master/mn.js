@@ -8,7 +8,12 @@ const monitor = { // 前端监控
 
 var consoleError = window.console.error; 
 window.console.error = function () { 
-    alert(JSON.stringify(arguments)); // 自定义处理
+    monitor.errors.push({
+        type: 'console_err',
+        msg: arguments
+        time: new Date().getTime(), // 错误发生的时间
+      })
+
     consoleError && consoleError.apply(window, arguments); 
 };
 
