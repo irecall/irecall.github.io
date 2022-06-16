@@ -6,6 +6,11 @@ const monitor = { // 前端监控
 
 
 
+var consoleError = window.console.error; 
+window.console.error = function () { 
+    alert(JSON.stringify(arguments)); // 自定义处理
+    consoleError && consoleError.apply(window, arguments); 
+};
 
 var oHead = document.getElementsByTagName("HEAD").item(0);
 
