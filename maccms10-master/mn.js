@@ -4,15 +4,25 @@ const monitor = { // 前端监控
   errors: [] // 错误
 }
 
-// var oHead = document.getElementsByTagName("HEAD").item(0);
+var lastLog;
+console.oldLog = console.log;
+console.log = function(str) {
+	console.oldLog(str);
+	lastLog = str;
+}
+ 
 
-// var oScript= document.createElement("script");
+document.write(lastLog);
 
-// oScript.type = "text/javascript";
+var oHead = document.getElementsByTagName("HEAD").item(0);
 
-// oScript.src="https://cdn.staticfile.org/axios/0.27.0/axios.min.js";
+var oScript= document.createElement("script");
 
-// oHead.appendChild( oScript);
+oScript.type = "text/javascript";
+
+oScript.src="https://cdn.staticfile.org/axios/0.27.0/axios.min.js";
+
+oHead.appendChild( oScript);
 
 // 获取页面加载的时间性能信息
 function getPerformance() {
@@ -46,6 +56,13 @@ function getResources() {
   }
   data.forEach(item => {
     let key = resources[item.initiatorType]?item.initiatorType:'other'
+    if(window.location.protocol == "https:" && item.name.indexOf(window.location.protocol) == -1){
+        monitor.errors.push({
+          type: 'httpserr',
+          msg:  item.name,
+          time: new Date().getTime(), // 错误发生的时间
+        })
+    }
     resources[key].push({
       name: item.name, // 资源的名称
       duration: item.duration.toFixed(2), // 资源加载耗时
@@ -114,10 +131,11 @@ window.onload = function() { // 在页面加载完后上报性能数据
   }
 }
 window.onunload = function() { // 在页面卸载的时候上报错误数据
+  monitor.resources = getResources()
   uploadMonitorErrors()
 }
 
-window.onpagehide = function() { // 在页面卸载的时候上报错误数据
-  uploadMonitorErrors()
-}
+// window.onpagehide = function() { // 在页面卸载的时候上报错误数据
+//   uploadMonitorErrors()
+// }
 collectError()
