@@ -10,7 +10,7 @@ var consoleError = window.console.error;
 window.console.error = function () { 
     monitor.errors.push({
         type: 'console_err',
-        msg: arguments
+        msg: arguments,
         time: new Date().getTime(), // 错误发生的时间
       })
 
