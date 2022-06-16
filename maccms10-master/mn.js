@@ -4,15 +4,8 @@ const monitor = { // 前端监控
   errors: [] // 错误
 }
 
-var lastLog;
-console.oldLog = console.log;
-console.log = function(str) {
-	console.oldLog(str);
-	lastLog = str;
-}
- 
 
-document.write(lastLog);
+
 
 var oHead = document.getElementsByTagName("HEAD").item(0);
 
