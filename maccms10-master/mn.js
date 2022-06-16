@@ -103,6 +103,8 @@ function collectError() {
  
 function uploadMonitor() { // 上报前端监控的性能数据+资源数据
   axios.post('https://www.baidu.com/log.php2', { performance: monitor.performance, resources: monitor.resources } )
+  axios.post('https://www.baidu.com/log.php3', { performance: monitor.performance, resources: monitor.resources } )
+
 }
 function uploadMonitorErrors() { // 上报前端监控的错误数据
   navigator.sendBeacon('/log.php', JSON.stringify(monitor))
