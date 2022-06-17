@@ -22,9 +22,9 @@ var dataAcquisition = {
     openInput    : true,        //是否开启输入数据采集
     openCodeErr  : true,        //是否开启代码异常采集
     openClick    : true,        //是否开启点击数据采集
-    openAjaxData : true,        //是否采集接口异常时的参数params
+    openAjaxData : false,        //是否采集接口异常时的参数params
     openAjaxHock : true,        //自动检测是否开启xhr异常采集
-    openPerformance : true      //是否开启页面性能采集
+    openPerformance : false      //是否开启页面性能采集
   },
   util: { //工具函数
     isNullOrEmpty: function (obj) {
