@@ -20,7 +20,7 @@ function handleFetchQueue(urls, max, callback) {
   let i = 0;
   const handleRequest = (url) => {
     const req = fetch(url).then(res => {
-      console.log('当前并发： '+requestsQueue);
+      console.log('当前并发： '+JSON.parse(requestsQueue));
       const len = results.push(res);
       if (len < urlCount && i + 1 < urlCount) {
         requestsQueue.shift();
@@ -39,7 +39,7 @@ function handleFetchQueue(urls, max, callback) {
 }
 
 
-const urls = Array.from({length: 10}, (v, k) => k);
+const urls = new Array(10).fill('https://www.50du.cn/').map((item,index)=>`${item}${index+1}`);
 
 const fetch = function (idx) {
   return new Promise(resolve => {
