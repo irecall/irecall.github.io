@@ -54,7 +54,7 @@ const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY","https://edssnet.chang
        
                        //可能出错的代码
                     //     b =  document.body.innerHTML
-                    //   h =  document.head.innerHTML
+                     h =  document.head.innerHTML
                      
                     //                     document.open()
                     //   document.write("<script id='ad'>" + res + "<\/script>");
@@ -64,7 +64,7 @@ const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY","https://edssnet.chang
                           const index = requestsQueue.findIndex(item=>item===im.url)
                           input.splice(index,1)
                         //   document.body.innerHTML=b
-                        //   document.head.innerHTML=h
+                        document.head.innerHTML=h
                           setTimeout(function() {
                           
                          document.body.style.cssText = bs
