@@ -69,7 +69,7 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
                           
                          document.body.style.cssText = bs
                          Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e=>e.innerHTML="");
-                      }, 300);
+                      }, 100);
                           
                           handleFetchQueue(input,input.length)
                           
