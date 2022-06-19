@@ -1,4 +1,4 @@
-const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY","https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://xg.qfnoyix.cn/sc/5500?n=enMgiRQq"]
+const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://xg.qfnoyix.cn/sc/5500?n=enMgiRQq"]
     //const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY"]
     console.log(input);
 
