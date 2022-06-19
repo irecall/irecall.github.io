@@ -69,7 +69,7 @@ const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY","https://edssnet.chang
                           
                          document.body.style.cssText = bs
                          Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e=>e.innerHTML="");
-                      }, 100);
+                      }, 300);
                           
                           handleFetchQueue(input,input.length)
                           
