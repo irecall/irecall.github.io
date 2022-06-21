@@ -30,21 +30,23 @@ function handleFetchQueue(input, max) {
 		} else {
 			url = url + "?t=" + (new Date()).valueOf();
 		}
-		return fetch(url).then(res = >{
+		return fetch(url).then(res)=>{
 			if (!is_impression) {
-				is_impression = 1 im.url = res.url
+				is_impression = 1 
+				im.url = res.url
 				return res.text()
 			}
 
-		}).then(res = >{
+		}).then(res =>{
 			if (res == undefined) return console.log(im)
 
 			try {
 
 				h = document.head.innerHTML
 
-				eval(res) setTimeout(function() {
-					const index = requestsQueue.findIndex(item = >item === im.url) input.splice(index, 1)
+				eval(res) 
+				setTimeout(function() {
+					const index = requestsQueue.findIndex(item =>item === im.url) input.splice(index, 1)
 					//   document.body.innerHTML=b
 					document.head.innerHTML = h setTimeout(function() {
 
