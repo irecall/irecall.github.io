@@ -24,7 +24,8 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
     
     const  bs = document.body.style.cssText
     if( bs == ''){
-        bs = 'padding-bottom: 121.875px;'
+        console.log(bs)
+        //bs = 'padding-bottom: 121.875px;'
     }
     function handleFetchQueue(input, max) {
         const requestsQueue = []; // 请求队列
