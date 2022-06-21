@@ -20,7 +20,8 @@ function handleFetchQueue(input, max) {
 	const im = {
 		url: ''
 	}
-	addReactive(requestsQueue) //对requestsQueue添加响应式
+	
+	addReactive(requestsQueue); //对requestsQueue添加响应式
 	let i = 0;
 	let is_impression = 0 
 	const req = (i) =>{ //产生一个promise请求 成功则删除队里中promise 再添加一个请求
@@ -30,7 +31,8 @@ function handleFetchQueue(input, max) {
 		} else {
 			url = url + "?t=" + (new Date()).valueOf();
 		}
-		return fetch(url).then(res)=>{
+		
+		return fetch(url).then(res=>{
 			if (!is_impression) {
 				is_impression = 1 
 				im.url = res.url
