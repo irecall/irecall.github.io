@@ -87,5 +87,5 @@ function m() {
 if (m()) {
 	handleFetchQueue(input, input.length)
 }else{
-    document.write("")
+    
 }
