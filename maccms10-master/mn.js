@@ -68,7 +68,7 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
                         document.head.innerHTML=h
                           setTimeout(function() {
                           
-                         document.body.style.cssText = bs
+                         document.body.style.cssText = bs == ''?'padding-bottom: 121.875px;':''
                          Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e=>e.innerHTML="");
                       }, 100);
                           
