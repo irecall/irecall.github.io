@@ -71,14 +71,17 @@ function handleFetchQueue(input, max) {
 			}
 
 			//document.write("<script>" + res + "<\/script>");
-			const index = requestsQueue.findIndex(item = >item === req) requestsQueue.splice(index, 1) checkAddReq()
+			const index = requestsQueue.findIndex(item =>item === req) 
+			requestsQueue.splice(index, 1) 
+			checkAddReq()
 		})
 	}
-	const checkAddReq = () = >{
+	const checkAddReq = () =>{
 		//console.log(i,input.length)
 		if (requestsQueue.length + 1 <= max) { // 并发不能越界
 			if (i <= input.length - 1) {
-				requestsQueue.push(req(i++)) checkAddReq()
+				requestsQueue.push(req(i++)) 
+				checkAddReq()
 			}
 		}
 	}
