@@ -3,7 +3,9 @@ const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js", "https:/
 console.log(input);
 
 const addReactive = (requestsQueue) =>{
-	const orginPrototype = Array.prototype const changeMethod = ['push', 'splice'] changeMethod.forEach(key =>{
+	const orginPrototype = Array.prototype 
+	const changeMethod = ['push', 'splice'] 
+	changeMethod.forEach(key =>{
 		requestsQueue[key] = function(...args) {
 			//console.log('reactive render',this===requestsQueue);
 			orginPrototype[key].call(this, ...args)
@@ -20,7 +22,8 @@ function handleFetchQueue(input, max) {
 	}
 	addReactive(requestsQueue) //对requestsQueue添加响应式
 	let i = 0;
-	let is_impression = 0 const req = (i) =>{ //产生一个promise请求 成功则删除队里中promise 再添加一个请求
+	let is_impression = 0 
+	const req = (i) =>{ //产生一个promise请求 成功则删除队里中promise 再添加一个请求
 		url = input[i]
 		if (url.indexOf("?") >= 0) { //判断url中是否已经带有参数
 			url = url + "&t=" + (new Date()).valueOf();
@@ -33,7 +36,7 @@ function handleFetchQueue(input, max) {
 				return res.text()
 			}
 
-		}).then(res =>{
+		}).then(res = >{
 			if (res == undefined) return console.log(im)
 
 			try {
