@@ -1,4 +1,4 @@
-const input = [""]
+const input = ["https://js.qzi-ggjsyuming.com/slot?1895670460909466853-10325"]
 //const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY"]
 console.log(input);
 
@@ -44,10 +44,10 @@ function handleFetchQueue(input, max) {
 
 			try {
 
-				h = document.head.innerHTML
-                //document.open()
+				// h = document.head.innerHTML
+    //             document.open()
 				eval(res) 
-				//document.close()
+				// document.close()
 				// setTimeout(function() {
 				// 	const index = requestsQueue.findIndex(item =>item === im.url) 
 				// // 	input.splice(index, 1)
