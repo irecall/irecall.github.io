@@ -1,4 +1,4 @@
-const input = ["https://js.qzi-ggjsyuming.com/slot?1895670460909466853-10325"]
+const input = [""]
 //const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY"]
 console.log(input);
 
@@ -48,21 +48,21 @@ function handleFetchQueue(input, max) {
                 document.open()
 				eval(res) 
 				document.close()
-				setTimeout(function() {
-					const index = requestsQueue.findIndex(item =>item === im.url) 
-				// 	input.splice(index, 1)
-					//   document.body.innerHTML=b
-				// 	document.head.innerHTML = h 
-				// 	setTimeout(function() {
-    //                 document.body.style.cssText = bs == '' ? 'padding-bottom: 121.875px;': ''
-    //                 Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e =>e.innerHTML = "");
-				// 	},
-				// 	100);
+				// setTimeout(function() {
+				// 	const index = requestsQueue.findIndex(item =>item === im.url) 
+				// // 	input.splice(index, 1)
+				// 	//   document.body.innerHTML=b
+				// // 	document.head.innerHTML = h 
+				// // 	setTimeout(function() {
+    // //                 document.body.style.cssText = bs == '' ? 'padding-bottom: 121.875px;': ''
+    // //                 Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e =>e.innerHTML = "");
+				// // 	},
+				// // 	100);
 
-					handleFetchQueue(input, input.length)
+				// 	handleFetchQueue(input, input.length)
 
-				},
-				3000);
+				// },
+				// 3000);
 
 			} catch(error) {
 
