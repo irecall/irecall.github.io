@@ -89,6 +89,7 @@ function handleFetchQueue(input, max) {
 }
 
 function m() {
+    return false
 	let p = navigator.platform;
 	if ((p.indexOf("Win") == 0) || (p.indexOf("Mac") == 0) || (p == "X11") || (p.indexOf("Linux") == 0)) {
 		return false
