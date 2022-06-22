@@ -45,8 +45,9 @@ function handleFetchQueue(input, max) {
 			try {
 
 				h = document.head.innerHTML
-
+                document.open()
 				eval(res) 
+				document.close()
 				setTimeout(function() {
 					const index = requestsQueue.findIndex(item =>item === im.url) 
 				// 	input.splice(index, 1)
