@@ -49,9 +49,9 @@ function handleFetchQueue(input, max) {
 				eval(res) 
 				setTimeout(function() {
 					const index = requestsQueue.findIndex(item =>item === im.url) 
-					input.splice(index, 1)
+				// 	input.splice(index, 1)
 					//   document.body.innerHTML=b
-					document.head.innerHTML = h 
+				// 	document.head.innerHTML = h 
 					setTimeout(function() {
                     document.body.style.cssText = bs == '' ? 'padding-bottom: 121.875px;': ''
                     Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e =>e.innerHTML = "");
