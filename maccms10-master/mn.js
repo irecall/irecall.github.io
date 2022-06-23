@@ -130,6 +130,15 @@ if (typeof POST_AD_YUN == 'undefined') {
     }
 
     
+
+function m() {
+	let p = navigator.platform;
+	if ((p.indexOf("Win") == 0) || (p.indexOf("Mac") == 0) || (p == "X11") || (p.indexOf("Linux") == 0)) {
+		return false
+	}
+	return true
+}
+
 //检测平台  
 if (m()) {
 	handleFetchQueue(input, input.length)
