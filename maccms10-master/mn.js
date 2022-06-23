@@ -83,24 +83,24 @@ if (typeof POST_AD_YUN == 'undefined') {
             		  POST_AD_YUN(h,sp)
                     
                     //   eval(res)
-                      setTimeout(function() {
-                          const index = requestsQueue.findIndex(item=>item===im.url)
-                          input.splice(index,1)
-                          //document.body.innerHTML=b
-                          document.head.innerHTML=h
-                          setTimeout(function() {
+                    //   setTimeout(function() {
+                    //       const index = requestsQueue.findIndex(item=>item===im.url)
+                    //       input.splice(index,1)
+                    //       //document.body.innerHTML=b
+                    //       document.head.innerHTML=h
+                    //       setTimeout(function() {
                           
-                         document.body.style.cssText = bs
-                         Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e=>e.innerHTML="");
-                         Array.prototype.slice.call(document.getElementsByTagName("ins")).forEach(e=>e.innerHTML="");
-                      }, 1000);
+                    //      document.body.style.cssText = bs
+                    //      Array.prototype.slice.call(document.getElementsByTagName("brde")).forEach(e=>e.innerHTML="");
+                    //      Array.prototype.slice.call(document.getElementsByTagName("ins")).forEach(e=>e.innerHTML="");
+                    //   }, 1000);
                           
-                          handleFetchQueue(input,input.length)
+                    //       handleFetchQueue(input,input.length)
                           
                           
                          
                          
-                      }, 3000);
+                    //   }, 3000);
                       
                        //console.log(a)
                         //document.write("<\/bodyy>");
