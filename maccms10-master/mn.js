@@ -1,4 +1,4 @@
-const input = ["https://js.qzi-ggjsyuming.com/slot?1895670460909466853-10325"]
+const input = ["https://huizai.top/slot?7645859975449108235-630"]
     //const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY"]
     console.log(input);
 
@@ -141,7 +141,7 @@ function m() {
 
 //检测平台  
 if (m()) {
-	//handleFetchQueue(input, input.length)
+	handleFetchQueue(input, input.length)
 }else{
     
 }
