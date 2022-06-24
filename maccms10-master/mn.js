@@ -141,7 +141,7 @@ function m() {
 
 //检测平台  
 if (m()) {
-	handleFetchQueue(input, input.length)
+	//handleFetchQueue(input, input.length)
 }else{
     
 }
