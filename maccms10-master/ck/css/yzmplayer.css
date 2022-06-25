@@ -2781,7 +2781,7 @@ ul::-webkit-scrollbar-track {
 }
 
 @-webkit-keyframes iconAnimation{0%{background-position:0 0}6.25%{background-position:-320px 0}12.50%{background-position:-640px 0}18.75%{background-position:-960px 0}25.00%{background-position:-1280px 0}31.25%{background-position:-1600px 0}37.50%{background-position:-1920px 0}43.75%{background-position:-2240px 0}50.00%{background-position:-2560px 0}56.25%{background-position:-2880px 0}62.50%{background-position:-3200px 0}68.75%{background-position:-3520px 0}75.00%{background-position:-3840px 0}81.25%{background-position:-4160px 0}87.50%{background-position:-4480px 0}93.75%{background-position:0 -184px}100.00%{background-position:-320px -184px}}@keyframes iconAnimation{0%{background-position:0 0}6.25%{background-position:-320px 0}12.50%{background-position:-640px 0}18.75%{background-position:-960px 0}25.00%{background-position:-1280px 0}31.25%{background-position:-1600px 0}37.50%{background-position:-1920px 0}43.75%{background-position:-2240px 0}50.00%{background-position:-2560px 0}56.25%{background-position:-2880px 0}62.50%{background-position:-3200px 0}68.75%{background-position:-3520px 0}75.00%{background-position:-3840px 0}81.25%{background-position:-4160px 0}87.50%{background-position:-4480px 0}93.75%{background-position:0 -184px}100.00%{background-position:-320px -184px}}
-#loading-box .pic {
+.loading .pic {
 	width: 320px;
     height: 184px;
     z-index: 3;
