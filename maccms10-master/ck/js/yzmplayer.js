@@ -447,7 +447,8 @@ var _peerId = '', _peerNum = 0, _totalP2PDownloaded = 0, _totalP2PUploaded = 0;
                                                     announce: "https://tracker.klink.tech",
                                                     wsSignalerAddr: 'wss://signal.klink.tech/ws',
                                                     getStats: function (totalP2PDownloaded, totalP2PUploaded, totalHTTPDownloaded) {
-                                                        var _peerId = '', _peerNum = 0, _totalP2PDownloaded = 0, _totalP2PUploaded = 0;
+                                                        _totalP2PDownloaded = totalP2PDownloaded
+                                                        _totalP2PUploaded = totalP2PUploaded
                                                         updateStats();
                                                     },
                                                     getPeerId: function (peerId) {
@@ -2946,7 +2947,8 @@ var yzmck = {
 	}
 };
 
-function updateStats(_peerNum, _totalP2PDownloaded, _totalP2PUploaded) {
+
+function updateStats() {
     var text = 'CDNBye P2P为您加速' + (_totalP2PDownloaded / 1024).toFixed(2) + 'MB 已分享' + (_totalP2PUploaded / 1024).toFixed(2) + 'MB' + ' 节点' + _peerNum + '个';
     document.getElementById('stats').innerText = text
 }
