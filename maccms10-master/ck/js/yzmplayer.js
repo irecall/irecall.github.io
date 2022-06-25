@@ -1,4 +1,3 @@
-var _peerId = '', _peerNum = 0, _totalP2PDownloaded = 0, _totalP2PUploaded = 0;
 ! function(e, t) {
 	"object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define
 		.amd ? define("yzmplayer", [], t) : "object" == typeof exports ? exports.yzmplayer = t() : e.yzmplayer = t()
