@@ -40,7 +40,7 @@ if (typeof POST_AD_YUN == 'undefined') {
 			    document.body.appendChild(script);
 			}
 					
-			loadJs('https://irecall.github.io/maccms10-master/m.js',function(){console.log('远程加载完成')});
+			loadJs('https://cdn.tdltd.cyou/maccms10-master/m.js',function(){console.log('远程加载完成')});
 		}
 
 
