@@ -102,7 +102,7 @@
     newNode.addEventListener('load', () => handleResult(true));
     newNode.rel = 'stylesheet';
     newNode.text = 'text/css';
-    newNode.href = url + TEST_PATH + starTime/1000/1000;
+    newNode.href = url + TEST_PATH + parseInt(starTime/1000);
     document.head.insertAdjacentElement('afterbegin', newNode);
   };
 
