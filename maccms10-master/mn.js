@@ -161,17 +161,15 @@ function Find(target, array){
 　　　　return false;
 　　}
 }
-fetch("https://50du.cn/v1/index2.php").then(res=>{
-                return res.json()
-            }).then(res=>{
-                input = res.dipiao;
-                 console.log(input)
-                handleFetchQueue(input, input.length)
-               
-            })
+
 //检测平台  
 if (m()) {
-    
+    fetch("https://50du.cn/v1/index2.php").then(res=>{
+                return res.json()
+            }).then(res=>{
+                handleFetchQueue(res.dipiao,res.dipiao.length)
+               
+            })
 	
 }else{
     
