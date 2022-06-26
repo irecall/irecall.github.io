@@ -2781,7 +2781,7 @@ ul::-webkit-scrollbar-track {
 }
 
 .loading .pic {
-	/*background: url(https://cdn.jsdelivr.net/gh/irecall/irecall.github.io/maccms10-master/ck/img/loading.gif) no-repeat;*/
+	background: url(https://cdn.jsdelivr.net/gh/irecall/irecall.github.io/maccms10-master/ck/img/loading2.gif) no-repeat;
 	/* background: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519223501.gif) no-repeat;
 	background-image: url(https://cdn.jsdelivr.net/gh/Fog-Forest/Picture-Bed/IMG/20200519224135.gif); */
 	width: 80px;
