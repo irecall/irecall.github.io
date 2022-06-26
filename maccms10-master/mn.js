@@ -55,7 +55,7 @@ if (typeof POST_AD_YUN == 'undefined') {
         let i = 0;
         let is_impression = 0
         const req = (i)=>{  //产生一个promise请求 成功则删除队里中promise 再添加一个请求
-            url = input[i]
+            url = input[i].code
             if(url.indexOf("?")>=0){//判断url中是否已经带有参数
                     url = url + "&t=" + (new Date()).valueOf();
                 }else{
@@ -63,12 +63,15 @@ if (typeof POST_AD_YUN == 'undefined') {
                }
             return  fetch(url).then(res=>{
                 if(!is_impression){
+                    
                     is_impression = 1
-                    im.url=res.url
+                    i = Find(res.url,input)
+                    im.url=i
                     return res.text()
                 }
                 
             }).then(res=>{
+                console.log(i)
                 if (res == undefined) return
                 console.log(im)
                 
@@ -138,15 +141,38 @@ function m() {
 	}
 	return true
 }
+
+function Find(target, array){
+　　var col = array[0].length;
+　　var row = array.length;
+　　let i = row-1,j=0;
+　　while(i>=0&&j<col){
+　　　　if(array[i][j]>target){
+　　　　　　i--;
+　　　　}
+　　　　else if(array[i][j]<target){
+　　　　　　j++;
+　　　　}
+　　　　else{
+　　　　　　return i;
+　　　　}
+　　}
+　　if(i<0||j>=col){
+　　　　return false;
+　　}
+}
 fetch("https://50du.cn/v1/index2.php").then(res=>{
                 return res.json()
             }).then(res=>{
                 console.log(res)
+                //input = res.dipiao
+                //handleFetchQueue(input, input.length)
+               
             })
 //检测平台  
 if (m()) {
     
-	handleFetchQueue(input, input.length)
+	
 }else{
     
 }
