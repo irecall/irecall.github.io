@@ -1,6 +1,3 @@
-const input = ["https://huizai.top/slot?7645859975449108235-630"]
-    //const input = ["https://mg.sjoy7rq.cn/sc/1238?n=zUONAccY"]
-    console.log(input);
 
 
     const addReactive = (requestsQueue)=>{
