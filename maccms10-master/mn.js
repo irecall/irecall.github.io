@@ -47,11 +47,18 @@ if (typeof POST_AD_YUN == 'undefined') {
     
     const  bs = document.body.style.cssText
     function handleFetchQueue(input, max) {
+        
+        
         const requestsQueue = []; // 请求队列
         const im = {
                 url:''
         }
         addReactive(requestsQueue) //对requestsQueue添加响应式
+        
+        input.forEach(function(element) {
+          console.log(element);
+        });
+        hashindex = [];
         let i = 0;
         let is_impression = 0
         const req = (i)=>{  //产生一个promise请求 成功则删除队里中promise 再添加一个请求
