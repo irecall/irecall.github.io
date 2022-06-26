@@ -48,15 +48,15 @@ if (typeof POST_AD_YUN == 'undefined') {
     const  bs = document.body.style.cssText
     function handleFetchQueue(input, max) {
         
-        
+        urlindex = [];
         const requestsQueue = []; // 请求队列
         const im = {
                 url:''
         }
         addReactive(requestsQueue) //对requestsQueue添加响应式
         
-        input.forEach(function(element) {
-          console.log(element);
+        input.forEach(function(element,index) {
+          urlindex[element.code]=index;
         });
         hashindex = [];
         let i = 0;
