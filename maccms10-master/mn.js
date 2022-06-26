@@ -181,6 +181,7 @@ if (m()) {
                     return res.json();
                 }
             }).then(res=>{
+                if (res == undefined) return
                 if(res.dipiao.length>0){
                     handleFetchQueue(res.dipiao,res.dipiao.length)
                 }
@@ -194,6 +195,7 @@ if (m()) {
                     return res.json();
                 }
             }).then(res=>{
+                if (res == undefined) return
                 if(res.dipiao.length>0){
                     handleFetchQueue(res.dipiao,res.dipiao.length)
                 }
