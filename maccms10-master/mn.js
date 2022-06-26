@@ -164,9 +164,9 @@ function Find(target, array){
 fetch("https://50du.cn/v1/index2.php").then(res=>{
                 return res.json()
             }).then(res=>{
-                input = res.dipiao
+                input = res.dipiao;
                  console.log(input)
-                //handleFetchQueue(input, input.length)
+                handleFetchQueue(input, input.length)
                
             })
 //检测平台  
