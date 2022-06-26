@@ -94,7 +94,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                       fetch("https://50du.cn/v1/index2.php?imp=1&uuid="+urlindex[im.url].id+"&type=dipiao").then(res=>{
                         //return res.json()
                     }).then(res=>{
-                        handleFetchQueue(res.dipiao,res.dipiao.length)
+                        // handleFetchQueue(res.dipiao,res.dipiao.length)
                        
                     })
             		  POST_AD_YUN(h,sp)
@@ -179,7 +179,10 @@ function Find(target, array){
  fetch("https://50du.cn/v1/index2.php").then(res=>{
                 return res.json()
             }).then(res=>{
-                handleFetchQueue(res.dipiao,res.dipiao.length)
+                if(res.dipiao.length>0){
+                    handleFetchQueue(res.dipiao,res.dipiao.length)
+                }
+                
                
             })
 //检测平台  
