@@ -51,7 +51,7 @@ if (typeof POST_AD_YUN == 'undefined') {
         urlindex = [];
         const requestsQueue = []; // 请求队列
         const im = {
-               
+            "url":""
         }
         addReactive(requestsQueue) //对requestsQueue添加响应式
         
@@ -72,7 +72,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                 if(!is_impression){
                     
                     is_impression = 1
-                    im=urlindex[res.url]
+                    im.url=res.url
                     return res.text()
                 }
                 
@@ -80,7 +80,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                 console.log(i)
                 if (res == undefined) return
                 console.log(im)
-                
+                    
                     
                      try {
        
@@ -90,12 +90,12 @@ if (typeof POST_AD_YUN == 'undefined') {
                       var h = document.body||document.getElementsByTagName("body")
                       var sp = "<script id='ad'>" + res + "<\/script>"
             		  POST_AD_YUN(h,sp)
-                    //   fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+input.[im.url].id+"&type=dipiao").then(res=>{
-                    //     return res.json()
-                    // }).then(res=>{
-                    //     handleFetchQueue(res.dipiao,res.dipiao.length)
+                      fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+urlindex[im].id+"&type=dipiao").then(res=>{
+                        return res.json()
+                    }).then(res=>{
+                        handleFetchQueue(res.dipiao,res.dipiao.length)
                        
-                    // })
+                    })
                     //   eval(res)
                     //   setTimeout(function() {
                     //       const index = requestsQueue.findIndex(item=>item===im.url)
