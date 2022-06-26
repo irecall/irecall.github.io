@@ -92,7 +92,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                       console.log(urlindex)
 
                       fetch("https://50du.cn/v1/index2.php?imp=1&uuid="+urlindex[im.url].id+"&type=dipiao").then(res=>{
-                        return res.json()
+                        //return res.json()
                     }).then(res=>{
                         handleFetchQueue(res.dipiao,res.dipiao.length)
                        
