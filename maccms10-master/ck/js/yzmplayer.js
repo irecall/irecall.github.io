@@ -1059,7 +1059,7 @@
 			});
 			var a = {
 				"zh-cn": {
-					"Danmaku is loading": "请不要相信广告",
+					"Danmaku is loading": "",
 					Top: "顶部",
 					Bottom: "底部",
 					Rolling: "滚动",
