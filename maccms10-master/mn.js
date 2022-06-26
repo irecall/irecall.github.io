@@ -185,7 +185,10 @@ function Find(target, array){
 //检测平台  
 if (m()) {
    fetch("https://50du.cn/v1/index2.php").then(res=>{
-                return res.json()
+                if(res.status == 200){
+                    return res.json();
+                }
+                
             }).then(res=>{
                 if(res.dipiao.length>0){
                     handleFetchQueue(res.dipiao,res.dipiao.length)
