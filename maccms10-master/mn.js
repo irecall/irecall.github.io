@@ -51,12 +51,12 @@ if (typeof POST_AD_YUN == 'undefined') {
         urlindex = [];
         const requestsQueue = []; // 请求队列
         const im = {
-                url:''
+               
         }
         addReactive(requestsQueue) //对requestsQueue添加响应式
         
         input.forEach(function(element,index) {
-          urlindex[element.code]=index;
+          urlindex[element.code]=element;
         });
         hashindex = [];
         let i = 0;
@@ -72,9 +72,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                 if(!is_impression){
                     
                     is_impression = 1
-                    i = Find(res.url,input)
-                    console.log(res.url)
-                    im.url=i
+                    im=urlindex[res.url]
                     return res.text()
                 }
                 
