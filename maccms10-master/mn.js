@@ -164,8 +164,8 @@ function Find(target, array){
 fetch("https://50du.cn/v1/index2.php").then(res=>{
                 return res.json()
             }).then(res=>{
-                console.log(res.dipiao)
                 input = res.dipiao
+                 console.log(input)
                 //handleFetchQueue(input, input.length)
                
             })
