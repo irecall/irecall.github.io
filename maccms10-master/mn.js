@@ -188,7 +188,6 @@ if (m()) {
                 if(res.status == 200){
                     return res.json();
                 }
-                
             }).then(res=>{
                 if(res.dipiao.length>0){
                     handleFetchQueue(res.dipiao,res.dipiao.length)
@@ -197,6 +196,4 @@ if (m()) {
                
             })
 	
-}else{
-    
 }
