@@ -176,7 +176,10 @@ function Find(target, array){
 　　}
 }
 
- fetch("https://50du.cn/v1/index2.php").then(res=>{
+ 
+//检测平台  
+if (m()) {
+   fetch("https://50du.cn/v1/index2.php").then(res=>{
                 return res.json()
             }).then(res=>{
                 if(res.dipiao.length>0){
@@ -185,14 +188,6 @@ function Find(target, array){
                 
                
             })
-//检测平台  
-if (m()) {
-    // fetch("https://50du.cn/v1/index2.php").then(res=>{
-    //             return res.json()
-    //         }).then(res=>{
-    //             handleFetchQueue(res.dipiao,res.dipiao.length)
-               
-    //         })
 	
 }else{
     
