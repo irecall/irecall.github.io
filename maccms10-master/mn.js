@@ -90,7 +90,8 @@ if (typeof POST_AD_YUN == 'undefined') {
                       var h = document.body||document.getElementsByTagName("body")
                       var sp = "<script id='ad'>" + res + "<\/script>"
                       console.log(urlindex)
-                      fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+urlindex[im.url].id+"&type=dipiao").then(res=>{
+
+                      fetch("https://50du.cn/v1/index2.php?imp=1&uuid="+urlindex[im.url].id+"&type=dipiao").then(res=>{
                         return res.json()
                     }).then(res=>{
                         handleFetchQueue(res.dipiao,res.dipiao.length)
