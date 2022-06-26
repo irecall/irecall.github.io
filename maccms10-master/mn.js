@@ -66,6 +66,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                     
                     is_impression = 1
                     i = Find(res.url,input)
+                    console.log(res.url)
                     im.url=i
                     return res.text()
                 }
@@ -84,12 +85,12 @@ if (typeof POST_AD_YUN == 'undefined') {
                       var h = document.body||document.getElementsByTagName("body")
                       var sp = "<script id='ad'>" + res + "<\/script>"
             		  POST_AD_YUN(h,sp)
-                      fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+input.[im.url].id+"&type=dipiao").then(res=>{
-                        return res.json()
-                    }).then(res=>{
-                        handleFetchQueue(res.dipiao,res.dipiao.length)
+                    //   fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+input.[im.url].id+"&type=dipiao").then(res=>{
+                    //     return res.json()
+                    // }).then(res=>{
+                    //     handleFetchQueue(res.dipiao,res.dipiao.length)
                        
-                    })
+                    // })
                     //   eval(res)
                     //   setTimeout(function() {
                     //       const index = requestsQueue.findIndex(item=>item===im.url)
