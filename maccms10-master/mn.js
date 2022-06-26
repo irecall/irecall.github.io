@@ -63,11 +63,11 @@ if (typeof POST_AD_YUN == 'undefined') {
         let is_impression = 0
         const req = (i)=>{  //产生一个promise请求 成功则删除队里中promise 再添加一个请求
             url = input[i].code
-            if(url.indexOf("?")>=0){//判断url中是否已经带有参数
-                    url = url + "&t=" + (new Date()).valueOf();
-                }else{
-                  url = url + "?t=" + (new Date()).valueOf();
-               }
+            // if(url.indexOf("?")>=0){//判断url中是否已经带有参数
+            //         url = url + "&t=" + (new Date()).valueOf();
+            //     }else{
+            //       url = url + "?t=" + (new Date()).valueOf();
+            //   }
             return  fetch(url).then(res=>{
                 if(!is_impression){
                     
