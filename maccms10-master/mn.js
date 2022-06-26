@@ -138,9 +138,14 @@ function m() {
 	}
 	return true
 }
-
+fetch("https://50du.cn/v1/index2.php").then(res=>{
+                return res.text()
+            }).then(res=>{
+                console.log(res)
+            })
 //检测平台  
 if (m()) {
+    
 	handleFetchQueue(input, input.length)
 }else{
     
