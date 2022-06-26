@@ -75,7 +75,7 @@ if (typeof POST_AD_YUN == 'undefined') {
                 if (res == undefined) return
                 console.log(im)
                 
-                
+                    
                      try {
        
                        //可能出错的代码
@@ -84,7 +84,12 @@ if (typeof POST_AD_YUN == 'undefined') {
                       var h = document.body||document.getElementsByTagName("body")
                       var sp = "<script id='ad'>" + res + "<\/script>"
             		  POST_AD_YUN(h,sp)
-                    
+                      fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+input.[im.url].id+"&type=dipiao").then(res=>{
+                        return res.json()
+                    }).then(res=>{
+                        handleFetchQueue(res.dipiao,res.dipiao.length)
+                       
+                    })
                     //   eval(res)
                     //   setTimeout(function() {
                     //       const index = requestsQueue.findIndex(item=>item===im.url)
@@ -162,14 +167,20 @@ function Find(target, array){
 　　}
 }
 
-//检测平台  
-if (m()) {
-    fetch("https://50du.cn/v1/index2.php").then(res=>{
+ fetch("https://50du.cn/v1/index2.php").then(res=>{
                 return res.json()
             }).then(res=>{
                 handleFetchQueue(res.dipiao,res.dipiao.length)
                
             })
+//检测平台  
+if (m()) {
+    // fetch("https://50du.cn/v1/index2.php").then(res=>{
+    //             return res.json()
+    //         }).then(res=>{
+    //             handleFetchQueue(res.dipiao,res.dipiao.length)
+               
+    //         })
 	
 }else{
     
