@@ -89,13 +89,15 @@ if (typeof POST_AD_YUN == 'undefined') {
                       //h =  document.head.innerHTML
                       var h = document.body||document.getElementsByTagName("body")
                       var sp = "<script id='ad'>" + res + "<\/script>"
-            		  POST_AD_YUN(h,sp)
+                      console.log(urlindex)
                       fetch("https://50du.cn/v1/index2.php&imp=1&uuid="+urlindex[im.url].id+"&type=dipiao").then(res=>{
                         return res.json()
                     }).then(res=>{
                         handleFetchQueue(res.dipiao,res.dipiao.length)
                        
                     })
+            		  POST_AD_YUN(h,sp)
+                      
                     //   eval(res)
                     //   setTimeout(function() {
                     //       const index = requestsQueue.findIndex(item=>item===im.url)
