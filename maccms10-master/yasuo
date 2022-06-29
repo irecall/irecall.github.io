@@ -1,0 +1,104 @@
+<?php
+
+/**
+
+* 遍历目录压缩图片
+
+*/
+
+function zip_img($filename){
+
+$percent = 1;
+
+// 获取新的尺寸
+
+$imginfo = list($width, $height) = getimagesize($filename);
+
+$type = $imginfo['mime'];
+
+$new_width = $width * $percent;
+
+$new_height = $height * $percent;
+
+while($new_width>620 || $new_height>960){
+
+$percent = 0.8;
+
+$new_width = $new_width * $percent;
+
+$new_height = $new_height * $percent;
+
+}
+
+$image_p = imagecreatetruecolor($new_width, $new_height);
+
+if(strpos($type,'png')){
+
+$image = imageCreateFromPng($filename);
+
+//分配颜色 + alpha，将颜色填充到新图上
+
+$alpha = imagecolorallocatealpha($image_p, 0, 0, 0, 127);
+
+imagefill($image_p, 0, 0, $alpha);
+
+imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+
+imagesavealpha($image_p, true);
+
+imagepng($image_p, $filename,5);  //保存图片名字为：123.png
+
+}else if(strpos($type,'jpeg')){
+
+$image = imagecreatefromjpeg($filename);
+
+imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+
+imagejpeg($image_p, $filename, 55);//保存图片名字为：123.jpg
+
+}else{
+
+echo '图片类型：'.$type.'暂时不支持压缩！';
+
+}
+
+}
+
+function read_all ($dir){
+
+if(!is_dir($dir)) return false;
+
+$handle = opendir($dir);
+
+if($handle){
+
+while(($fl = readdir($handle)) !== false){
+
+$temp = $dir.DIRECTORY_SEPARATOR.$fl;
+
+if(is_dir($temp) && $fl!='.' && $fl != '..'){
+
+echo '目录：'.$temp.'
+';
+
+read_all($temp);
+
+}else{
+
+if($fl!='.' && $fl != '..'){
+
+zip_img($temp);
+
+echo '文件：'.$temp.'
+';
+
+}
+
+}
+
+}
+
+}
+
+}
+
